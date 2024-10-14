@@ -1,0 +1,5 @@
+[core]
+    remote = storage
+    autostage = false
+['remote "storage"']
+    url = s3://test-dbt-01aws/MLOPSGrupo3
