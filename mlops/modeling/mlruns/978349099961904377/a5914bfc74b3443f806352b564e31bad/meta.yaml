@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/978349099961904377/a5914bfc74b3443f806352b564e31bad/artifacts
+end_time: 1729403001295
+entry_point_name: ''
+experiment_id: '978349099961904377'
+lifecycle_stage: active
+run_id: a5914bfc74b3443f806352b564e31bad
+run_name: bright-doe-365
+run_uuid: a5914bfc74b3443f806352b564e31bad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729402980627
+status: 3
+tags: []
+user_id: balde

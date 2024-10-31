@@ -1,0 +1,4 @@
+data:
+  filepath: "./notebooks/data/raw/online_news_popularity.csv"
+  processed: data/processed/
+  models: models/

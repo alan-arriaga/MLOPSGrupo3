@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/249624807021219648/f1d84f8a850a46a0ad983b67be7c37e8/artifacts
+end_time: 1729390338075
+entry_point_name: ''
+experiment_id: '249624807021219648'
+lifecycle_stage: active
+run_id: f1d84f8a850a46a0ad983b67be7c37e8
+run_name: puzzled-fly-67
+run_uuid: f1d84f8a850a46a0ad983b67be7c37e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729390334018
+status: 3
+tags: []
+user_id: balde

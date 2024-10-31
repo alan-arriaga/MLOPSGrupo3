@@ -100,5 +100,10 @@ bin/
 /data/processed
 /data/raw
 
+# exclude data from mlflow
+/mlops/modeling/mlartifacts
+/mlruns
+/outputs
+
 # exclude external models from source control
 /src/external/

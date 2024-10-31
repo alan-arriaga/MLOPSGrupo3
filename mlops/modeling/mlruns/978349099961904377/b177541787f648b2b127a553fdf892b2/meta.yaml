@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/978349099961904377/b177541787f648b2b127a553fdf892b2/artifacts
+end_time: 1729403768170
+entry_point_name: ''
+experiment_id: '978349099961904377'
+lifecycle_stage: active
+run_id: b177541787f648b2b127a553fdf892b2
+run_name: calm-seal-127
+run_uuid: b177541787f648b2b127a553fdf892b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729403748915
+status: 3
+tags: []
+user_id: balde

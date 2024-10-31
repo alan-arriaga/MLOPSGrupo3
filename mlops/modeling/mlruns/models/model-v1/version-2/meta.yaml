@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1729402985900
+current_stage: None
+description: ''
+last_updated_timestamp: 1729402985900
+name: model-v1
+run_id: a5914bfc74b3443f806352b564e31bad
+run_link: ''
+source: mlflow-artifacts:/978349099961904377/a5914bfc74b3443f806352b564e31bad/artifacts/online_news_shares
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/978349099961904377/a5914bfc74b3443f806352b564e31bad/artifacts/online_news_shares
+user_id: null
+version: 2

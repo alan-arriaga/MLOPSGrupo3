@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/871494987648019647/64358799a11d48dbb4f310c7eeba3e2a/artifacts
+end_time: 1729401702210
+entry_point_name: ''
+experiment_id: '871494987648019647'
+lifecycle_stage: active
+run_id: 64358799a11d48dbb4f310c7eeba3e2a
+run_name: monumental-swan-596
+run_uuid: 64358799a11d48dbb4f310c7eeba3e2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729401698744
+status: 3
+tags: []
+user_id: balde
