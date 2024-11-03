@@ -20,4 +20,6 @@ Directory Structure
         ├── viz  <- scripts for visualisation during EDA, modelling, error analysis etc. 
         ├── modeling    <- scripts for generating models
     |--- environment.yml <- file with libraries and library versions for recreating the analysis environment
+    |--- requirements.txt   <- The requirements file for reproducing the analysis environment
+    
    
