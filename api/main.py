@@ -7,6 +7,19 @@ import numpy as np
 import subprocess
 from pydantic import BaseModel
 import os
+import mlflow
+from mlflow.models import infer_signature
+
+
+################################################################################
+# Set our tracking server uri for logging
+################################################################################
+
+mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
+
+# Create a new MLflow Experiment
+mlflow.set_experiment("regression_model")
+
 
 ###################Subprocess to execute test
 try:
@@ -20,10 +33,12 @@ except:
     print('----Something was wrong with the test, check out the paths!')
 
 
-###############Getting model and X_train to create new model
-X_train, model_reg = getting_data()
-joblib.dump(model_reg, 'regression_model.joblib')
-model = joblib.load('regression_model.joblib')
+with mlflow.start_run() as run:
+    ###############Getting model and X_train to create new model
+    X_train, model_reg = getting_data()
+    joblib.dump(model_reg, 'regression_model.joblib')
+    model = joblib.load('regression_model.joblib')
+    mlflow.log_param("model_type", "regression_model")
 
 # Definir el esquema para la entrada de datos (esperamos 58 características)
 print('----------------STARTING API PROCESS----------------')
