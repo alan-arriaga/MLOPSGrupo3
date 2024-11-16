@@ -1,18 +1,33 @@
 from typing import Union
-
+from pipeline import getting_data
+from dict_schema_test import dict_schema
 from fastapi import FastAPI
-
-
 import joblib
 import numpy as np
-
-
-# scaler = joblib.load('../scalerV001.joblib')
-
-app = FastAPI()
+import subprocess
 from pydantic import BaseModel
+import os
+
+###################Subprocess to execute test
+try:
+    print('-----------------Starting subprocess-----------------------')
+    root = os.getcwd()
+    path = os.path.join(root, 'api')
+    os.chdir(path)
+    subprocess.run(['pytest', 'pipeline.py'])
+    print('-----------------Subprocess for testing ran correctly------')
+except:
+    print('----Something was wrong with the test, check out the paths!')
+
+
+###############Getting model and X_train to create new model
+X_train, model_reg = getting_data()
+joblib.dump(model_reg, 'regression_model.joblib')
+model = joblib.load('regression_model.joblib')
 
 # Definir el esquema para la entrada de datos (esperamos 58 características)
+print('----------------STARTING API PROCESS----------------')
+app = FastAPI()
 class PredictionRequest(BaseModel):
     feature_1: float
     feature_2: float
@@ -76,7 +91,6 @@ class PredictionRequest(BaseModel):
 # Endpoint para realizar la predicción
 @app.post("/predict")
 def predict(request: PredictionRequest):
-    model = joblib.load('modeloV001.joblib')
     # Convertir el cuerpo de la solicitud a un array de numpy (reshape para asegurar que sea una sola fila)
     features = np.array([[
         request.feature_1, request.feature_2, request.feature_3, request.feature_4, request.feature_5,
